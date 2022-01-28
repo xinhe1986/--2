@@ -16,3 +16,34 @@
     </script>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="info">0</h1>
+    <button id="btn1">开始</button>
+    <button id="btn2">结束</button>
+    <script>
+        var oInfo = document.getElementById("info");
+        var oBtn1 = document.getElementById("btn1");
+        var oBtn2 = document.getElementById("btn2");
+        var a = 0;
+        var timmer;
+        oBtn1.onclick = function() {
+            timmer = setInterval(function() {
+                oInfo.innerText = ++a;
+            },2000);
+        };
+        oBtn2.onclick = function() {
+            timmer = clearInterval(timmer);
+        };
+    </script>
+</body>
+</html>
